@@ -1,3 +1,11 @@
 language: node_js
 node_js:
 - '0.12'
+deploy:
+  provider: npm
+  email: simon.menke@gmail.com
+  api_key:
+    secure: JVzrFP2j6mH5QzvQynBiQJALcHBYNT6ErYdBWxBCp+x5VnHGGATlvOyanHv4K0yLlV46SxrkFbt0fssZT58eUZCCddGEb4S3q/EVpmcdwVGLbR9tosEctoii+ReM+eGp+lzg+grogqBklMnfrZTA4UgfkzWK5wYb18swVn0wy1jIc48sA+gn6NAE+snYcC+W0vHlddoLcx1YQp5XgYXeQxHqUutCCjC2zw78QoqPiNqIGymNOBkuEBepl1gTH1nAAcsNqbH9EkOPTNRrTj8tmm8/BtfCugNG10uflJzEz8IufBM8yhiVGXKXYN1F8ZfqfRq0BnSHR4W+7Tg7dhF0AYi0qToAeLU9LGuklrOQQK/WWaFGlFQjYIv2QmvhaMEdZUOPc5zfvqmifIDJkXT3QJaUctASdK+oOCr+yv2+zvOyy40lC6TbS6P48g0djixRg79M47UUzLZchy7pv9nlynVeY6pW4p0pOSUJggiEr/19+jRptcukS0OWjsvCSTVgeMecPvqfLIXJQ15I4MWz5lq5Yr7/1O+aSjRKKc+eDkmuwC4lTMrQlL2AxCeyFlxURVdyiMZrw/tukC6wFA+uiCAp5Fvu0InMGIx/9wNsmqyaBM7B+wV3ai35Cb/hNANWoxIGpN5ewD2dBqrIdZjb53pVznqRH5XHQb/tQDESLKs=
+  on:
+    tags: true
+    repo: fd/fd-angular-tmpl
