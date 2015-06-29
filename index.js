@@ -7,12 +7,10 @@ export function translate(unit) {
   var escSource = JSON.stringify(unit.source);
 
   return `"format es6";
-    import ng from "angular";
-
     var name = ${escName};
     export default name;
 
-    ng.module("ng").run(['$templateCache', function($templateCache){
+    angular.module("ng").run(['$templateCache', function($templateCache){
       $templateCache.put(${escName},${escSource});
     }]);
   `;
