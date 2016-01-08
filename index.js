@@ -6,9 +6,9 @@ export function translate(unit) {
   var escName   = JSON.stringify(name);
   var escSource = JSON.stringify(unit.source);
 
-  return `"format es6";
-    var name = ${escName};
-    export default name;
+  unit.metadata.format = 'global';
+
+  return `var name = ${escName};
 
     angular.module("ng").run(['$templateCache', function($templateCache){
       $templateCache.put(${escName},${escSource});
