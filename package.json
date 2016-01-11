@@ -1,6 +1,6 @@
 {
   "name": "fd-angular-tmpl",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Personal package for handling angular templates in jspm",
   "repository": "https://github.com/fd/fd-angular-tmpl.git",
   "main": "index.js",
