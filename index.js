@@ -1,4 +1,4 @@
-export function translate(unit) {
+exports.translate = function translate(unit) {
   var name = unit.name;
 
   name = name.replace(/[!].+$/, '');
