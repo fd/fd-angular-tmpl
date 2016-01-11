@@ -15,8 +15,5 @@
   "author": "Simon Menke",
   "license": "MIT",
   "devDependencies": {},
-  "dependencies": {},
-  "jspm": {
-    "format": "es6"
-  }
+  "dependencies": {}
 }

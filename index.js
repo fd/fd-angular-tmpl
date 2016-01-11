@@ -5,13 +5,20 @@ export function translate(unit) {
 
   var escName   = JSON.stringify(name);
   var escSource = JSON.stringify(unit.source);
+  var result = `
+    def`+`ine(function() {
+        var name = ${escName};
+        var source = ${escSource};
 
-  unit.metadata.format = 'global';
+        angular.module("ng").run(['$templateCache', function($templateCache){
+          $templateCache.put(name, source);
+        }]);
 
-  return `var name = ${escName};
-
-    angular.module("ng").run(['$templateCache', function($templateCache){
-      $templateCache.put(${escName},${escSource});
-    }]);
+        return name;
+    });
   `;
+
+  unit.metadata.format = 'amd';
+
+  return result;
 };
